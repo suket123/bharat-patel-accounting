@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import heroImage from "../../public/hero-image.png";
 
 export default function Hero() {
     return (
@@ -71,10 +73,11 @@ export default function Hero() {
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                 >
                     <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(30,64,175,0.2)] border-[16px] border-white ring-1 ring-slate-100">
-                        <img
-                            src="/hero-image.png"
+                        <Image
+                            src={heroImage}
                             alt="Bharat Patel Professional Accounting Services"
                             className="w-full h-auto object-cover aspect-[4/5]"
+                            priority
                         />
                     </div>
 
